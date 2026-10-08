@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truco Gaúcho</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- TELA DE INICIO -->
+  <section id="splashScreen" class="screen active">
+    <div id="splashFrame" class="frame fit-w" style="background-image:url('assets/abertura.png');">
+      <div id="splashVeil"></div>
+      <div id="splashPrompt">TOQUE PARA COMEÇAR</div>
+    </div>
+  </section>
+
+  <!-- MENU PRINCIPAL -->
+  <section id="menuScreen" class="screen">
+    <div id="menuFrame" class="frame fit-w" style="background-image:url('assets/menu.png');">
+      <button id="btnIniciar" class="hotspot" aria-label="Iniciar"><span class="glow"></span></button>
+      <button id="btnConfig" class="hotspot" aria-label="Configurações"><span class="glow"></span></button>
+    </div>
+  </section>
+
+  <!-- MODO DE JOGO -->
+  <section id="modeScreen" class="screen">
+    <div id="modeFrame" class="frame fit-w" style="background-image:url('assets/modos.png');">
+      <button id="btnBack" aria-label="Voltar">←</button>
+
+      <button id="btn1v1" class="hotspot" aria-label="1 vs 1"><span class="glow"></span></button>
+      <button id="btn1vUI" class="hotspot" aria-label="1 vs Robo"><span class="glow"></span></button>
+    </div>
+  </section>
+
+</div>
+
+<!-- MODAL CONFIGURAÇÕES -->
+<div id="modalVeil">
+  <div class="panel">
+    <h2>CONFIGURAÇÕES</h2>
+    <div class="row">
+      <label for="volMusic">MÚSICA</label>
+      <input type="range" id="volMusic" min="0" max="100" value="70">
+    </div>
+    <div class="row">
+      <label for="volSfx">EFEITOS</label>
+      <input type="range" id="volSfx" min="0" max="100" value="80">
+    </div>
+    <div class="row">
+      <label for="dificuldade">DIFICULDADE</label>
+      <select id="dificuldade">
+        <option value="facil">FÁCIL</option>
+        <option value="normal" selected>NORMAL</option>
+        <option value="dificil">DIFÍCIL</option>
+      </select>
+    </div>
+    <div class="panel-actions">
+      <button class="pbtn" id="btnFechar">FECHAR</button>
+      <button class="pbtn primary" id="btnSalvar">SALVAR</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
